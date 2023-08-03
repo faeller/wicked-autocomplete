@@ -1,0 +1,29 @@
+# ip a > example-ip-a-txt
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp0s31f6: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state DOWN group default qlen 1000
+    link/ether 00:be:43:50:76:5a brd ff:ff:ff:ff:ff:ff
+3: wlp0s20f3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 70:a6:cc:8e:20:1a brd ff:ff:ff:ff:ff:ff
+    inet 192.168.42.18/23 brd 192.168.43.255 scope global dynamic noprefixroute wlp0s20f3
+       valid_lft 587sec preferred_lft 587sec
+    inet6 fe80::decf:c8d5:911c:d57b/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+4: enp0s13f0u2u4: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state DOWN group default qlen 1000
+    link/ether 00:be:43:50:76:5b brd ff:ff:ff:ff:ff:ff
+5: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:f5:b0:21:2d brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+6: br-e646828b05fc: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:83:ba:fa:d8 brd ff:ff:ff:ff:ff:ff
+    inet 172.22.0.1/16 brd 172.22.255.255 scope global br-e646828b05fc
+       valid_lft forever preferred_lft forever
+7: virbr0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    link/ether 52:54:00:52:6c:0a brd ff:ff:ff:ff:ff:ff
+    inet 192.168.122.1/24 brd 192.168.122.255 scope global virbr0
+       valid_lft forever preferred_lft forever

@@ -1,0 +1,13 @@
+#p620:/home/clemix # wicked ifstatus --brief all
+lo              up
+tun0            setup-in-progress
+br99            up
+eth0            up
+virbr1          device-unconfigured
+virbr0          device-unconfigured
+vnet0           device-unconfigured
+vnet1           device-unconfigured
+vnet2           device-unconfigured
+vnet3           device-unconfigured
+eth1            no-device
+wlan0           no-device
