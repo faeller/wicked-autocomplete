@@ -8,13 +8,13 @@ bash_script_path = './wicked-autocomplete.sh'
 # Get the absolute path
 bash_script_path = os.path.realpath(bash_script_path)
 
-# Path to the Python autocompleter script (relative or absolute)
-python_script_path = './wicked-autocomplete'
+# Path to the autocompleter binary
+autocompleter_binary_path = './wicked-autocomplete'
 # Get the absolute path
-python_script_path = os.path.realpath(python_script_path)
+autocompleter_binary_path = os.path.realpath(autocompleter_binary_path)
 
 # Target paths to copy the Bash and Python scripts
-target_bash_path = '/usr/local/bin/wicked-autocomplete.sh'
+target_bash_path = '/usr/share/bash-completion/completions/wicked'
 target_binary_path = '/usr/local/bin/wicked-autocomplete'
 
 # Copy the Bash script to the target location
@@ -22,7 +22,7 @@ shutil.copy(bash_script_path, target_bash_path)
 os.chmod(target_bash_path, 0o755)
 
 # Copy the Python script to the target location
-shutil.copy(python_script_path, target_binary_path)
+shutil.copy(autocompleter_binary_path, target_binary_path)
 os.chmod(target_binary_path, 0o755)
 
 print("Wicked autocompletion installed successfully!")
