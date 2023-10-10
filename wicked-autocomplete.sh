@@ -2,7 +2,7 @@
 
 _wicked_autocomplete() {
     local current_command=${COMP_LINE}
-    local suggestions=$(python3 /usr/local/bin/wicked_autocompleter.py ${current_command})
+    local suggestions=$(/usr/local/bin/wicked_autocomplete ${current_command})
     COMPREPLY=($suggestions)
 }
 
